@@ -9,11 +9,16 @@
 
 <%- include('partials/header.ejs') %>
 <body>
-        <a href="/profile">Profile</a>
-        <br>
-        <a href="/socket">Chat</a>
-        <br>
-        <a href="/logout">Logout</a>
+    <button onclick="makePet()">Make new pet</button>
 </body>
+<script>
+    function makePet () {
+        let petData = {
+            name: window.prompt('What do you want the name of your pet to be?'),
+            user: '<%- user %>'
+        }
 
+        
+    }
+</script>
 </html>

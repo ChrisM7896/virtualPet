@@ -8,6 +8,7 @@ function homeRoute(app) {
                 res.render('login');
             } else if (req.session.user && isAuthenticated) {
                 res.render('home', {
+                    user: req.session.user,
                     displayName: req.session.displayName
                 });
             };
