@@ -10,6 +10,9 @@
 <%- include('partials/header.ejs') %>
 <body>
     <button onclick="makePet()">Make new pet</button>
+    <div id="petBox">
+        <img id="petImg" style="width: 250px; height: 250px;"></img>
+    </div>
 </body>
 <script>
     function makePet () {
@@ -18,7 +21,11 @@
             user: '<%- user %>'
         }
 
-        
+        // send to database
+
+        let img = document.getElementById('petImg')
+        img.src = 'public/cat.png'
+
     }
 </script>
 </html>
